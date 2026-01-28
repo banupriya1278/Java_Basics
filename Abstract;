@@ -1,0 +1,29 @@
+import java.util.*;
+abstract class Website
+{
+   String WebsiteName;
+   abstract void setWebsiteName(String s);
+   String getWebsiteName()
+   {
+      return WebsiteName;
+   }
+}
+class MyWebsite extends Website
+{
+    void setWebsiteName(String WebsiteName)
+    {
+        this.WebsiteName=WebsiteName;
+    }
+}
+public class Main
+{
+   public static void main(String []args)
+   {
+      Scanner sc=new Scanner(System.in);
+      String WebsiteName=sc.nextLine();
+      MyWebsite w=new MyWebsite();
+      w.setWebsiteName(WebsiteName);
+      System.out.println("The WebsiteName is: "+w.getWebsiteName());
+      sc.close();
+   }
+}
